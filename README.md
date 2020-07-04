@@ -1,5 +1,5 @@
 # UiB
-Beamer theme for the University of Bergen
+Beamer theme for the National Taiwan Normal University
 
 ## Options
 Options are given as

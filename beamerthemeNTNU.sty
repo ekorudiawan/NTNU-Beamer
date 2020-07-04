@@ -194,13 +194,15 @@
 
 
 %% Standard fonts:
-\setbeamerfont{author}    {size   = \huge,
+\setbeamerfont{author}    {size   = \normalsize,
                            series = \normalfont\bfseries}
-\setbeamerfont{title}     {size   = \huge,
+\setbeamerfont{institute} {size   = \normalsize,
+                           series = \normalfont\bfseries}
+\setbeamerfont{title}     {size   = \Large,
                            series = \bfseries}
-\setbeamerfont{subtitle}  {size   = \LARGE,
+\setbeamerfont{subtitle}  {size   = \Large,
                            series = \normalfont\rmfamily}
-\setbeamerfont{frametitle}{size = \LARGE,
+\setbeamerfont{frametitle}{size = \Large,
                            series = \bfseries}
 \setbeamerfont{title in head/foot} {series = \bfseries}
 \setbeamerfont{author in head/foot}{series = \bfseries}
@@ -222,30 +224,26 @@
 
 \setbeamertemplate{title page}
 {
+    \vspace*{0.5em}
+    \begin{minipage}{\textwidth}
+        \includegraphics[scale = 0.28]{NTNU-images/ntnu-long}
+    \end{minipage}
+    \vspace*{1.5em}
     \begin{center}
         \usebeamerfont{title}
         \inserttitle
-        \\
-        \usebeamerfont{subtitle}
-        \insertsubtitle
     \end{center}
-    \begin{beamercolorbox}[wd        = \paperwidth,
-                           ht        = 11 mm,
-                           dp        = \dimexpr 0.4\paperheight - 11 mm \relax,
-                           leftskip  = 1 em,
-                           rightskip = 1 em]
-                          {section in head/foot}
-        \begin{minipage}[t][0.28\paperheight]{\textwidth}
-            \centering
-            \usebeamerfont{author}
-            \insertauthor
-            \vfill
-            \hfill
-            % \includegraphics[scale = 0.4]{NTNU-images/UiB-logo-\UiBlang}
-            \includegraphics[scale = 0.3]{NTNU-images/ntnu-long}
-        \end{minipage}
+    \vspace*{1.0em}
+    \begin{beamercolorbox}[wd=\paperwidth, sep=1em]{section in head/foot}
+        \centering
+        \usebeamerfont{author}\insertauthor
+        \vfill
+        \usebeamerfont{institute}\insertinstitute
     \end{beamercolorbox}
-    \vspace*{-1.3em}
+
+    \begin{center}
+        \includegraphics[scale = 3.1]{NTNU-images/ntnu-building}
+    \end{center}
 }
 
 
